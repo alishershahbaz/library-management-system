@@ -6,11 +6,20 @@ reversing books, as well as checking the collection status.
 
 ## Build and run
 
-With MinGW-w64 on Windows:
+### Visual Studio Code on Windows
+
+Open this project folder in VS Code, install the recommended C/C++ extension if
+prompted, and press **Ctrl+F5**. This builds all project source files and opens
+the program in a console window where you can enter menu choices.
+
+### Build manually
+
+With MinGW-w64 on Windows, run these commands in the project folder:
 
 ```powershell
-g++ -std=c++11 *.cpp -o library-management-system.exe
-.\library-management-system.exe
+$sources = Get-ChildItem -Filter *.cpp | ForEach-Object { $_.FullName }
+g++ -std=c++11 $sources -o library.exe
+if ($LASTEXITCODE -eq 0) { .\library.exe }
 ```
 
 With a C++ compiler on Linux or macOS:

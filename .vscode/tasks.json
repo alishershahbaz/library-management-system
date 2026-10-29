@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "process",
+            "label": "Build Library Management System",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-g",
+                "index.cpp",
+                "input.cpp",
+                "linked_list.cpp",
+                "menu.cpp",
+                "display_books.cpp",
+                "insert_book_at_head.cpp",
+                "insert_book_at_index.cpp",
+                "remove_book_at_index.cpp",
+                "remove_book_from_head.cpp",
+                "reverse_book_collection.cpp",
+                "sort_books.cpp",
+                "swap_books.cpp",
+                "check_collection_status.cpp",
+                "-o",
+                "library.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$gcc",
+            "group": "build"
+        }
+    ]
+}
